@@ -8,6 +8,7 @@ class GithubCard extends React.Component {
             <div>
                 <img alt={user.name} src={user.avatar_url} />
                 <section>
+                    <p>Username: {user.login}</p>
                     <p>About: {user.bio}</p>
                     <p>Location: {user.location}</p>
                     <p>Followers: {user.followers} * <span>Following: {user.following}</span></p>

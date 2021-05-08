@@ -24,7 +24,7 @@ class Followers extends React.Component {
             <div>
                 {this.state.followers.length === 0 ? <div>There is no followers</div> :
                     this.state.followers.map(follower => (
-                        <Follower follower={follower} />
+                        <Follower follower={follower} key={follower.id} />
                     ))
                 }
             </div>
