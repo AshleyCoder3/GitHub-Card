@@ -10,7 +10,7 @@ class Followers extends React.Component {
     componentDidMount() {
         Axios.get('https://api.github.com/users/aburn7577/followers')
             .then(res => {
-                console.log('ab: FollowersCard.js:CDM: res', res.data)
+                // console.log('ab: FollowersCard.js:CDM: res', res.data)
                 this.setState({
                     followers: res.data
                 })
@@ -21,7 +21,7 @@ class Followers extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='follower-card'>
                 {this.state.followers.length === 0 ? <div>There is no followers</div> :
                     this.state.followers.map(follower => (
                         <Follower follower={follower} key={follower.id} />

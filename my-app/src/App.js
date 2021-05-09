@@ -26,7 +26,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1><a href={this.state.user.html_url}>{this.state.user.name}'s GitHub</a></h1>
         <GithubCard user={this.state.user} />
         <FollowersCard followers={this.state.user.followers_url} />
       </div>
